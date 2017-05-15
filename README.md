@@ -11,6 +11,7 @@ Include:
 7. Spring Security (form login + inMemory Authentication + Md5 Encoder);
 8. H2 datasoucre config;
 9. Memory base cache support.
+
 Enchanment Later:
 1. Delopy to local;
 2. Self defined security;
