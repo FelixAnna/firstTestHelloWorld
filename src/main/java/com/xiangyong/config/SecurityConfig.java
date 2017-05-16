@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(new Md5PasswordEncoder())
                 .withUser("user").password("5f4dcc3b5aa765d61d8327deb882cf99").roles("USER")
                 .and()
-                .withUser("admin").password("5f4dcc3b5aa765d61d8327deb882cf99").roles("ADMIN","USER");
+                .withUser("admin").password("5f4dcc3b5aa765d61d8327deb882cf99").roles("ADMIN","USER","ACTUATOR");
 //        builder.jdbcAuthentication().dataSource(datasource);
 //        builder.ldapAuthentication().userSearchBase("ou=people").userSearchFilter("(uid={0}")...
 //        builder.userDetailsService(XXX)
