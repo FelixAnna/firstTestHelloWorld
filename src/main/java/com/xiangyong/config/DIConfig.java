@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
         com.xiangyong.controller.ContactController.class
         ,com.xiangyong.entity.ContactInfo.class
         ,com.xiangyong.repository.ContactRepository.class
-        ,com.xiangyong.utils.ControlllerAdvice.class
+        ,com.xiangyong.utils.ControllerAdvice.class
 })
 public class DIConfig {
 }

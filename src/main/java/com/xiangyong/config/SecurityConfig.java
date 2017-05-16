@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity webSecurity) throws Exception {
-        //webSecurity.addSecurityFilterChainBuilder()
+//        webSecurity.addSecurityFilterChainBuilder()
     }
 
     @Override
@@ -53,9 +53,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("user").password("5f4dcc3b5aa765d61d8327deb882cf99").roles("USER")
                 .and()
                 .withUser("admin").password("5f4dcc3b5aa765d61d8327deb882cf99").roles("ADMIN","USER");
-        //builder.jdbcAuthentication().dataSource(datasource);
-        //builder.ldapAuthentication().userSearchBase("ou=people").userSearchFilter("(uid={0}")...
-        //builder.userDetailsService(XXX)
+//        builder.jdbcAuthentication().dataSource(datasource);
+//        builder.ldapAuthentication().userSearchBase("ou=people").userSearchFilter("(uid={0}")...
+//        builder.userDetailsService(XXX)
     }
 
     private CsrfTokenRepository csrfTokenRepository()

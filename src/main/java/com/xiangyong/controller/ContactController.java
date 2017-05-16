@@ -44,9 +44,9 @@ public class ContactController {
         return totalCount;
     }
     @RequestMapping(value = {"/all","/list","/"},method = RequestMethod.GET)
-    public Page<ContactInfo> contacts(@RequestParam(value = "skip", defaultValue = "0")int skip
-                                        ,@RequestParam(value = "take", defaultValue = "20")int take) {
-        Pageable pageable = new PageRequest(skip, take);
+    public Page<ContactInfo> contacts(@RequestParam(value = "page", defaultValue = "0")int page
+                                        ,@RequestParam(value = "size", defaultValue = "20")int size) {
+        Pageable pageable = new PageRequest(page, size);
 
         Page<ContactInfo> contacts= repository.findAll(pageable);
         if(contacts == null || !contacts.hasContent()) {

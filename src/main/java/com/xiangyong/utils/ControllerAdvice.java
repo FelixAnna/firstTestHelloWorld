@@ -12,18 +12,18 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Aspect
-public class ControlllerAdvice {
+public class ControllerAdvice {
     @Pointcut("execution(* com.xiangyong.controller.ContactController.*(..))")
     public void actionName(){};
 
-    private static final Logger logger= LoggerFactory.getLogger(ControlllerAdvice.class);
+    private static final Logger logger= LoggerFactory.getLogger(ControllerAdvice.class);
 
     @Around("actionName()")
     public Object aroundActionAdvice(ProceedingJoinPoint joinPoint) throws Throwable{
         long start = System.currentTimeMillis();
         Object obj = joinPoint.proceed();
         long end = System.currentTimeMillis();
-        logger.info("time cost: {}",(end - start));
+        logger.info("Time cost: {}",(end - start));
 
         return obj;
     }

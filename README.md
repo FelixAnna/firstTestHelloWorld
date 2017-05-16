@@ -6,11 +6,11 @@ Include:
 2. slf4J + Log4J;
 3. RESTful API;
 4. Spring Data JPA Repository;
-5. AOP example;
+5. AOP Example;
 6. Controller Advice Example;
 7. Spring Security (form login + inMemory Authentication + Md5 Encoder);
-8. H2 datasoucre config;
-9. Memory base cache support.
+8. H2 Datasoucre Config;
+9. Memory Based Cache Support.
 
 Enchanment Later:
 1. Delopy to local;
