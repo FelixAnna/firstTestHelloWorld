@@ -13,6 +13,6 @@ Include:
 9. Memory Based Cache Support.
 
 Enchanment Later:
-1. Delopy to local;
+1. Delopy to local: @20170516 deployed to local tomcat server and works well;
 2. Self defined security;
 3. Post login support.
