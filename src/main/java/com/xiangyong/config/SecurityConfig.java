@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
@@ -31,14 +32,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
                     .anyRequest().permitAll()
                 .and()
-                    .formLogin()
+                    .formLogin() //POST: http://localhost:9999/login?username=user&password=password
                 .and()
-                    .logout()
-                    .clearAuthentication(true)
-                    .logoutSuccessUrl("/")
-                    .invalidateHttpSession(true)
-                    .deleteCookies("JSESSIONID")
-                    .addLogoutHandler(new SecurityContextLogoutHandler());
+                    .logout() //POST: http://localhost:9999/logout
+                    .logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler()); //only return status code
     }
 
     @Override
