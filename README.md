@@ -3,7 +3,7 @@
 	Spring Version: Spring 4
 Include:
 1. Spring Boot Starter + AutoConfig + Actuator;
-2. slf4J + Log4J;
+2. slf4J + Logback;
 3. RESTful API;
 4. Spring Data JPA Repository;
 5. AOP Example;
