@@ -15,4 +15,4 @@ Include:
 Enhancement Later:
 1. Deploy to local: @20170516 deployed to local tomcat server and works well;
 2. Self defined security;
-3. Post login support.
+3. Post login support.@20170526：formed style login.
