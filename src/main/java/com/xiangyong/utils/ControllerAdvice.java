@@ -24,7 +24,6 @@ public class ControllerAdvice {
         Object obj = joinPoint.proceed();
         long end = System.currentTimeMillis();
         logger.info("Time cost: {}",(end - start));
-
         return obj;
     }
 
