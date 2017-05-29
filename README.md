@@ -11,6 +11,7 @@ Include:
 7. Spring Security (form login + inMemory Authentication + Md5 Encoder);
 8. H2 Datasource Config;
 9. Memory Based Cache Support.
+10. API Test with SpringBootTest.
 
 Enhancement Later:
 1. Deploy to local: @20170516 deployed to local tomcat server and works well;
