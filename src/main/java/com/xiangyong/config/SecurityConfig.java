@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.csrf().disable()   //.csrfTokenRepository(csrfTokenRepository()).and() //API dont need this
                  .authorizeRequests()
-                    .antMatchers("/contact/**","/other/index").authenticated()
+                    .antMatchers("/contacts/**","/other/index").authenticated()
                     .antMatchers("/home/**").hasRole("ADMIN")
                     .antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
                     .anyRequest().permitAll()
