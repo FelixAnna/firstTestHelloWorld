@@ -22,13 +22,13 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = FirstTestHelloWorldApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@TestPropertySource(properties = {"management.port=0"})
+//@TestPropertySource(properties = {"management.port=0"})
 public class FirstTestHelloWorldApplicationTests {
 	@LocalServerPort
 	private int port;
 
-	@Value("${local.management.port}")
-	private int mgt;
+	//@Value("${local.management.port}")
+	//private int mgt;
 
 	@Autowired
 	private TestRestTemplate testRestTemplate;
