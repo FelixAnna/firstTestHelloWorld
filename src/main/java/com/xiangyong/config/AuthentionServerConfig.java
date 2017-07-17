@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  * Created by yuxiangyong on 2017/6/3.
- */
+
 @Configuration
 public class AuthentionServerConfig {
     @Bean("oauthFilter")
@@ -49,12 +49,12 @@ public class AuthentionServerConfig {
     }
 
     @ConfigurationProperties("github")
-    private ClientResources github() {
+    ClientResources github() {
         return new ClientResources();
     }
 
     @ConfigurationProperties("facebook")
-    private ClientResources facebook() {
+    ClientResources facebook() {
         return new ClientResources();
     }
 
@@ -84,3 +84,4 @@ public class AuthentionServerConfig {
         }
     }
 }
+ */

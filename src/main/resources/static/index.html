@@ -33,7 +33,7 @@
     <script type="text/javascript">
         angular.module("app", []).controller("home", function($http, $location) {
             var self = this;
-            $http.get("/security/user").success(function(data) {
+            $http.get("/login/user").success(function(data) {
                 self.user = data.userAuthentication.details.name;
                 self.authenticated = true;
             }).error(function() {

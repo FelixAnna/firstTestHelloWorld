@@ -21,14 +21,14 @@ import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
  * Created by yuxiangyong on 2017/5/12.
  */
 //disable form base authentication
-//@Configuration
-//@EnableWebSecurity
+@Configuration
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.csrf().disable()   //.csrfTokenRepository(csrfTokenRepository()).and() //API dont need this
                  .authorizeRequests()
-                    .antMatchers("/contacts/**","/other/index").authenticated()
+                    .antMatchers("/contact/**","/other/index").authenticated()
                     .antMatchers("/admin/**").hasRole("ADMIN")
                     .antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
                     .anyRequest().permitAll()
